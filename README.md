@@ -26,7 +26,7 @@ Our function will take Markdown files stored in our **InputBucket**, detect the 
 
 We are using [Amazon Comprehend](https://aws.amazon.com/comprehend/) to detect overall interview sentiment.  Amazon Comprehend is a machine learning powered service that makes it easy to find insights and relationships in text. We use the Sentiment Analysis API to understand whether interview responses are positive or negative.
 
-The Sentiment workflow uses the same SQS-to-Lambda Function pattern as the Coversion workflow.
+The Sentiment workflow uses the same SQS-to-Lambda Function pattern as the Conversion workflow.
 
 If our **SentimentFunction** cannot remove the messages from the **SentimentQueue**, they are sent to **SentimentDlq**, a dead-letter queue (DLQ), for inspection. A CloudWatch Alarm is configured to send notification to an email address when there are any messages in the **SentimentDlq**.
 
@@ -238,7 +238,7 @@ creates the following resources:
 
 - **AlarmTopic** - A SNS topic that has an email as a subscriber.  This topic is used to receive alarms from the **ConversionDlqAlarm**, **SentimentDlqAlarm**, **ConversionQueueAlarm**, **SentimentQueueAlarm**, **ConversionFunctionErrorRateAlarm**, **SentimentFunctionErrorRateAlarm**, **ConversionFunctionThrottleRateAlarm**, and **SentimentFunctionThrottleRateAlarm**.
 
-- **ConversionDlqAlarm** - A CloudWatch Alarm that detects when there there are any messages sent to the **ConvesionDlq** within a 1 minute period and sends a notification to the **AlarmTopic**.
+- **ConversionDlqAlarm** - A CloudWatch Alarm that detects when there there are any messages sent to the **ConversionDlq** within a 1 minute period and sends a notification to the **AlarmTopic**.
 
 - **SentimentDlqAlarm** - A CloudWatch Alarm that detects when there there are any messages sent to the **SentimentDlq** within a 1 minute period and sends a notification to the **AlarmTopic**.
 
