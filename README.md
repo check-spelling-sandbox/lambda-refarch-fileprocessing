@@ -34,7 +34,7 @@ If our **SentimentFunction** cannot remove the messages from the **SentimentQueu
 
 This application is deployed using the [AWS Serverless Application Model (AWS SAM)](https://aws.amazon.com/serverless/sam/).  AWS SAM is an open-source framework that enables you to build serverless applications on AWS.  It provides you with a template specification to define your serverless application, and a command line interface (CLI) tool.
 
-### Pre-requisites
+### Prerequisites
 
 * [AWS CLI version 2](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
 
