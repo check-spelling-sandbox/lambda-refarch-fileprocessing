@@ -93,7 +93,7 @@ DYNAMO_TABLE=$(aws cloudformation describe-stack-resource \
 
 
 echo "Found Input Bucket: $BUCKET_IN"
-echo "Found Ouput Bucket: $BUCKET_OUT"
+echo "Found Output Bucket: $BUCKET_OUT"
 echo "Found DynamoDB Table: $DYNAMO_TABLE"
 
 ## Get Samples
