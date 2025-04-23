@@ -238,9 +238,9 @@ creates the following resources:
 
 - **AlarmTopic** - A SNS topic that has an email as a subscriber.  This topic is used to receive alarms from the **ConversionDlqAlarm**, **SentimentDlqAlarm**, **ConversionQueueAlarm**, **SentimentQueueAlarm**, **ConversionFunctionErrorRateAlarm**, **SentimentFunctionErrorRateAlarm**, **ConversionFunctionThrottleRateAlarm**, and **SentimentFunctionThrottleRateAlarm**.
 
-- **ConversionDlqAlarm** - A CloudWatch Alarm that detects when there there are any messages sent to the **ConversionDlq** within a 1 minute period and sends a notification to the **AlarmTopic**.
+- **ConversionDlqAlarm** - A CloudWatch Alarm that detects when there are any messages sent to the **ConversionDlq** within a 1 minute period and sends a notification to the **AlarmTopic**.
 
-- **SentimentDlqAlarm** - A CloudWatch Alarm that detects when there there are any messages sent to the **SentimentDlq** within a 1 minute period and sends a notification to the **AlarmTopic**.
+- **SentimentDlqAlarm** - A CloudWatch Alarm that detects when there are any messages sent to the **SentimentDlq** within a 1 minute period and sends a notification to the **AlarmTopic**.
 
 - **ConversionQueueAlarm** - A CloudWatch Alarm that detects when there are 20 or more messages in the **ConversionQueue** within a 1 minute period and sends a notification to the **AlarmTopic**.
 
@@ -250,9 +250,9 @@ creates the following resources:
 
 - **SentimentFunctionErrorRateAlarm** - A CloudWatch Alarm that detects when there is an error rate of 5% over a 5 minute period for the **SentimentFunction** and sends a notification to the **AlarmTopic**.
 
-- **ConversionFunctionThrottleRateAlarm** - A CloudWatch Alarm that detects when ther is a throttle rate of 1% over a 5 minute period for the **ConversionFunction** and sends a notification to the **AlarmTopic**.
+- **ConversionFunctionThrottleRateAlarm** - A CloudWatch Alarm that detects when there is a throttle rate of 1% over a 5 minute period for the **ConversionFunction** and sends a notification to the **AlarmTopic**.
 
-- **SentimentFunctionThrottleRateAlarm** - A CloudWatch Alarm that detects when ther is a throttle rate of 1% over a 5 minute period for the **SentimentFunction** and sends a notification to the **AlarmTopic**.
+- **SentimentFunctionThrottleRateAlarm** - A CloudWatch Alarm that detects when there is a throttle rate of 1% over a 5 minute period for the **SentimentFunction** and sends a notification to the **AlarmTopic**.
 
 - **ApplicationDashboard** - A CloudWatch Dashboard that displays Conversion Function Invocations, Conversion Function Error Rate, Conversion Function Throttle Rate, Conversion DLQ Length, Sentiment Function Invocations, Sentiment Function Error Rate, Sentiment Function Throttle Rate, and Sentiment DLQ Length.
 
